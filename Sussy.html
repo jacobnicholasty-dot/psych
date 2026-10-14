@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iMotions Split-Screen Study</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .panel {
+      width: 50%;
+      height: 100%;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-panel {
+      background: #111;
+      color: white;
+    }
+
+    .survey-panel {
+      background: #f4f4f4;
+      border-left: 2px solid #ccc;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 0 0 12px;
+    }
+
+    iframe {
+      flex: 1;
+      width: 100%;
+      min-height: 0;
+      border: none;
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <section class="panel video-panel">
+      <h2>Video Stimulus</h2>
+
+      <iframe
+        src="Psych Video.mp4"
+        title="Study video"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section class="panel survey-panel">
+      <h2>Survey Questions</h2>
+
+      <iframe
+        src="YOUR_SURVEY_URL"
+        title="Study survey">
+      </iframe>
+    </section>
+
+  </main>
+</body>
+</html>
